@@ -1,0 +1,13 @@
+@use "src/styles/vars";
+
+.single {
+    width: 100%;
+    padding: vars.$gutter;
+    h2 {
+        font-size: 2em;
+    }
+
+    .blog--zen & {
+        font-size: 1.5rem;
+    }
+}

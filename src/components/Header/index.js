@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import classNames from 'classnames';
 import './styles.scss';
 
 function Header({ categories, toggleZenMode, zenMode }) {
@@ -10,7 +11,7 @@ function Header({ categories, toggleZenMode, zenMode }) {
         {categories.map((category) => (
           <NavLink
             key={category.route}
-            className="menu-link" // 'menu-link--selected'
+            className={({ isActive }) => classNames('menu-link', { 'menu-link--selected': isActive })}
             to={category.route}
           >
             {category.label}

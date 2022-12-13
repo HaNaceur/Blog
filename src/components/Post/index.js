@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import './styles.scss';
@@ -11,9 +12,11 @@ function Post({
 }) {
   return (
     <article className="post">
-      <h2 className="post-title">{title}</h2>
-      <div className="post-category">{category}</div>
-      <p className="post-excerpt">{excerpt}</p>
+      <Link to={`/post/${id}`}>
+        <h2 className="post-title">{title}</h2>
+        <div className="post-category">{category}</div>
+        <p className="post-excerpt">{excerpt}</p>
+      </Link>
     </article>
   );
 }

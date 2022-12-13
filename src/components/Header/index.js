@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 import './styles.scss';
 
 function Header({ categories, toggleZenMode, zenMode }) {
@@ -7,13 +8,13 @@ function Header({ categories, toggleZenMode, zenMode }) {
     <header className="menu">
       <nav>
         {categories.map((category) => (
-          <a
+          <NavLink
             key={category.route}
             className="menu-link" // 'menu-link--selected'
-            href={category.route}
+            to={category.route}
           >
             {category.label}
-          </a>
+          </NavLink>
         ))}
         <button
           className="menu-btn"

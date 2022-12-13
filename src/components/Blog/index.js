@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import classNames from 'classnames';
 
 import Header from 'src/components/Header';
@@ -25,9 +26,17 @@ function Blog() {
         zenMode={zenMode}
         toggleZenMode={toggleZenMode}
       />
-      <Posts
+      <Routes>
+        <Route path="/" element={<div>Accueil</div>} />
+        <Route path="/angular" element={<div>Angular c'est de la merde</div>} />
+        <Route path="/post" element={<div>Un post</div>} />
+        <Route path="/post/:postId" element={<div>le post 42</div>} />
+        <Route path="*" element={<div>ici c'est le 404</div>} />
+
+        {/* <Posts
         posts={postsData}
-      />
+      /> */}
+      </Routes>
       <Footer />
     </div>
   );

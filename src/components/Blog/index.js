@@ -1,4 +1,6 @@
-// Composants
+import React, { useState } from 'react';
+import classNames from 'classnames';
+
 import Header from 'src/components/Header';
 import Posts from 'src/components/Posts';
 import Footer from 'src/components/Footer';
@@ -9,18 +11,27 @@ import postsData from 'src/data/posts';
 import './styles.scss';
 
 // == Composant
-const Blog = () => {
-  console.log(categoriesData);
-  console.log(postsData);
+function Blog() {
+  const [zenMode, setZenMode] = useState(false);
+
+  const toggleZenMode = () => {
+    setZenMode(!zenMode);
+  };
 
   return (
-    <div className="blog">
-      <Header />
-      <Posts />
+    <div className={classNames('blog', { 'blog--zen': zenMode })}>
+      <Header
+        categories={categoriesData}
+        zenMode={zenMode}
+        toggleZenMode={toggleZenMode}
+      />
+      <Posts
+        posts={postsData}
+      />
       <Footer />
     </div>
   );
-};
+}
 
 // == Export
 export default Blog;

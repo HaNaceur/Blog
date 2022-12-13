@@ -1,4 +1,4 @@
-@use 'src/styles/vars';
+@use "src/styles/vars";
 
 .post {
   width: 100%;
@@ -35,5 +35,9 @@
     margin-top: 0.5rem;
     font-weight: 300;
     color: vars.$post-text-color;
+  }
+
+  .blog--zen & {
+    width: 100%;
   }
 }

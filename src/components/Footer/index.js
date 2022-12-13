@@ -1,6 +1,8 @@
+import React from 'react';
+
 import './styles.scss';
 
-const Footer = () => {
+function Footer() {
   const now = new Date();
   const year = now.getFullYear();
 
@@ -9,6 +11,6 @@ const Footer = () => {
       DevOfThrones, le blog du développeur React - {year} ©
     </footer>
   );
-};
+}
 
-export default Footer;
+export default React.memo(Footer);

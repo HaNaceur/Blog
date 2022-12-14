@@ -31,8 +31,8 @@ function Blog() {
     setIsLoading(true); // on met isLoading à true avant de charger les données
     setErrorMessage(null); // on reset les messages d'erreurs
     try {
-      const postResponse = await axios.get('https://oclock-open-apis.vercel.app/api/blog/pssosts');
-      setPosts(postResponse.data);
+      const postsResponse = await axios.get('https://oclock-open-apis.vercel.app/api/blog/posts');
+      setPosts(postsResponse.data);
       const categoriesResponse = await axios.get('https://oclock-open-apis.vercel.app/api/blog/categories');
       setCategories(categoriesResponse.data);
     }

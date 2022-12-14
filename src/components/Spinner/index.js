@@ -1,8 +1,10 @@
-// == Import
+import React from 'react';
 import './styles.scss';
 
 // == Composant
-const Spinner = () => <div className="spinner" />;
+function Spinner() {
+  return <div className="spinner" />;
+}
 
 // == Export
-export default Spinner;
+export default React.memo(Spinner);

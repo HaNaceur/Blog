@@ -24,7 +24,10 @@ function SinglePost({ posts }) { // on recupère la liste des posts de Blog via 
     <article className="single">
       <h2 className="post-title">{postFound.title}</h2>
       <div className="post-category">{postFound.category}</div>
-      <p className="post-excerpt">{postFound.excerpt}</p>
+      <p
+        className="post-excerpt"
+        dangerouslySetInnerHTML={{ __html: postFound.excerpt }}
+      />
     </article>
   );
 }

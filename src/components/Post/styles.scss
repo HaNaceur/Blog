@@ -35,6 +35,13 @@
     margin-top: 0.5rem;
     font-weight: 300;
     color: vars.$post-text-color;
+
+    strong {
+      font-weight: bold;
+    }
+    em {
+      font-style: italic;
+    }
   }
 
   .blog--zen & {

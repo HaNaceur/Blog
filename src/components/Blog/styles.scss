@@ -1,7 +1,15 @@
-@use 'src/styles/vars';
+@use "src/styles/vars";
 
 .blog {
   font-family: vars.$global-font;
   font-weight: vars.$global-font-weight;
   background-color: vars.$light-color;
+}
+
+.error {
+  background-color: rgb(250, 196, 196);
+  color: rgb(125, 7, 7);
+  padding: vars.$gutter;
+  text-align: center;
+  font-size: 1.2em;
 }
